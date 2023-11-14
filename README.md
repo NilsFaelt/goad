@@ -196,4 +196,6 @@ vagrant
 Guest
 Administrator
 
+cme smb winterfell.north.sevenkingdoms.local -u pnightmare2 -p 'Test123456789!' --ntds
+
 
