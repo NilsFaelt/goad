@@ -198,4 +198,4 @@ Administrator
 
 cme smb winterfell.north.sevenkingdoms.local -u pnightmare2 -p 'Test123456789!' --ntds
 
-
+cme ldap winterfell.north.sevenkingdoms.local -u jon.snow -p iknownothing -d north.sevenkingdoms.local -M MAQ
