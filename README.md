@@ -179,3 +179,21 @@ nslookup -type=srv _ldap._tcp.dc._msdcs.sevenkingdoms.local 192.168.56.10
 curl -s https://www.hbo.com/game-of-thrones/cast-and-crew | grep 'href="/game-of-thrones/cast-and-crew/'| grep -o 'aria-label="[^"]*"' | cut -d '"' -f 2 | awk '{if($2 == "") {print tolower($1)} else {print tolower($1) "." tolower($2);} }' > got_users.txt
 
 
+sql_svc
+jeor.mormont
+samwell.tarly
+jon.snow
+hodor
+rickon.stark
+brandon.stark
+sansa.stark
+robb.stark
+catelyn.stark
+eddard.stark
+arya.stark
+krbtgt
+vagrant
+Guest
+Administrator
+
+
